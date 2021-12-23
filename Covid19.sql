@@ -1,3 +1,8 @@
+/*
+Covid 19 Data Exploration 
+Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+*/
+
 select * from PortfolioProjectDatabase..CovidDeaths
 
 select * from PortfolioProjectDatabase..CovidVaccinations
@@ -51,7 +56,7 @@ where continent is not null
 group by date
 order by 1,2
 
---selecting new vaccines per day in each country
+--Selecting new vaccines per day in each country
 select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
 From PortfolioProjectDatabase..CovidVaccinations vac
 Join PortfolioProjectDatabase..CovidDeaths dea
